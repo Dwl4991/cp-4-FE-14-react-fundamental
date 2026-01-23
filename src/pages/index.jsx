@@ -1,6 +1,6 @@
-import { useState } from "react";
 import posts from "../post.json"
 import Article from "../components/Article"
+import Search from "../components/Search"
 function Homepage() {
   const [search, setSearch] = useState("")
 
@@ -10,11 +10,10 @@ function Homepage() {
   return(
     <>
     <h1>Simple Blog</h1>
-    <div>Cari Article: <input onChange={changeSearch}></input></div>
-    <small>Ditemukan 0 data dengan pencarian kata {search}</small>
-    {posts.map(({title, tags, date}, index) => (
-      // <Article title={title} tags={tags} date={date} />
-      <Article {...{title, tags, date}} key={index} />
+    <Search />
+    {posts.map((props, index) => (
+     
+      <Article {...props} key={index} />
     ))}
     </>
   );
