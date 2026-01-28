@@ -1,16 +1,18 @@
-import posts from "../post.json"
+import { useState } from "react"
+import postsData from "../post.json"
 import Article from "../components/Article"
 import Search from "../components/Search"
 function Homepage() {
-  const [search, setSearch] = useState("")
-
-  const changeSearch = (event) => {
-    setSearch (event.target.value);
+  const [posts, setPosts] = useState(postsData)
+  const onSearchChange = (value) => {
+console.log(value);
+const filteredPosts = postsData.filter(item => item.title.includes(value))
+setPosts(filteredPosts);
   }
-  return(
+    return(
     <>
     <h1>Simple Blog</h1>
-    <Search />
+    <Search onSearchChange={onSearchChange}/>
     {posts.map((props, index) => (
      
       <Article {...props} key={index} />
