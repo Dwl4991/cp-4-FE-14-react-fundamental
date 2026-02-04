@@ -2,16 +2,19 @@
   {
     "title": "tutorial belajar reactjs lengkap",
     "tags": ["reactjs", "frontend"],
-    "date": "2023-01-01"
+    "date": "2023-01-01",
+    "isNew": true
   },
   {
     "title": "Meningkatkan performa di reactjs ",
     "tags": ["reactjs", "frontend"],
-    "date": "2023-01-02"
+    "date": "2023-01-02",
+    "isNew": true
   },
   {
     "title": "cara menggunakan chakra-ui di reactjs",
     "tags": ["reactjs", "css"],
-    "date": "2023-01-03"
+    "date": "2023-01-03",
+    "isNew": false
   }
 ]
